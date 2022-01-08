@@ -30,7 +30,7 @@ const BaseHeader = () => {
   );
   return (
     <div className={styles.menu}>
-      <div>孤寂无情</div>
+      <div className={styles['menu-title']}>孤寂无情</div>
       {RenderMenu()}
     </div>
   );
