@@ -1,9 +1,7 @@
 import { Menu } from 'antd';
-import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
+import { MailOutlined, AppstoreOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 import styles from './index.module.less';
-
-const { SubMenu } = Menu;
 
 const BaseHeader = () => {
   const [current, setCurrent] = useState('mail');
@@ -14,25 +12,19 @@ const BaseHeader = () => {
   const RenderMenu = () => (
     <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
       <Menu.Item key="mail" icon={<MailOutlined />}>
-        Navigation One
+        首页
       </Menu.Item>
-      <Menu.Item key="app" disabled icon={<AppstoreOutlined />}>
-        Navigation Two
+      <Menu.Item key="tag" icon={<AppstoreOutlined />}>
+        标签
       </Menu.Item>
-      <SubMenu key="SubMenu" icon={<SettingOutlined />} title="Navigation Three - Submenu">
-        <Menu.ItemGroup title="Item 1">
-          <Menu.Item key="setting:1">Option 1</Menu.Item>
-          <Menu.Item key="setting:2">Option 2</Menu.Item>
-        </Menu.ItemGroup>
-        <Menu.ItemGroup title="Item 2">
-          <Menu.Item key="setting:3">Option 3</Menu.Item>
-          <Menu.Item key="setting:4">Option 4</Menu.Item>
-        </Menu.ItemGroup>
-      </SubMenu>
-      <Menu.Item key="alipay">
-        <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-          Navigation Four - Link
-        </a>
+      <Menu.Item key="pigeonhole" icon={<AppstoreOutlined />}>
+        归档
+      </Menu.Item>
+      <Menu.Item key="link" icon={<AppstoreOutlined />}>
+        友联
+      </Menu.Item>
+      <Menu.Item key="about" icon={<AppstoreOutlined />}>
+        关于我
       </Menu.Item>
     </Menu>
   );

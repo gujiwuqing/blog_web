@@ -1,0 +1,44 @@
+@import '~antd/es/style/themes/default.less';
+
+.title {
+  background: rgb(121, 242, 157);
+}
+
+ul li {
+  list-style: none;
+}
+
+.nav-container {
+  width: 200px;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+
+  &-item {
+    margin: 15px 0;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 19px;
+    height: 39px;
+
+    &:hover {
+      color: white;
+      background-color: @primary-color;
+      box-shadow: 0 8px 10px @primary-color;
+    }
+  }
+}
+
+.active {
+  color: white;
+  background-color: @primary-color;
+  box-shadow: 0 8px 10px @primary-color;
+}
+
+.content {
+  display: flex;
+}
