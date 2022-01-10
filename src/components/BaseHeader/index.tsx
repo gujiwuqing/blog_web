@@ -2,16 +2,18 @@ import { Menu } from 'antd';
 import { MailOutlined, AppstoreOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 import styles from './index.module.less';
+import {useHistory} from 'umi'
 
 const BaseHeader = () => {
+  const history  = useHistory()
   const [current, setCurrent] = useState('mail');
-  const handleClick = (e) => {
-    console.log('click ', e);
+  const handleClick = (e:any) => {
     setCurrent(e.key);
+    history.push(e.key)
   };
   const RenderMenu = () => (
     <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
-      <Menu.Item key="mail" icon={<MailOutlined />}>
+      <Menu.Item key="/" icon={<MailOutlined />}>
         首页
       </Menu.Item>
       <Menu.Item key="tag" icon={<AppstoreOutlined />}>

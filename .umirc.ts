@@ -6,7 +6,9 @@ export default defineConfig({
   },
   routes: [
     { path: '/', component: '@/pages/home' },
-    { path: '/article', component: '@/pages/article/info' },
+    { path: '/article/:id', component: '@/pages/article/info' },
+    { path: '/link', component: '@/pages/link' },
+    { path: '/about', component: '@/pages/about' },
   ],
   fastRefresh: {},
   mfsu: {},
