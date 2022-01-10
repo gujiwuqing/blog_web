@@ -1,3 +1,52 @@
 body {
   background: #f5f5f5;
 }
+
+
+.layout {
+  //margin-top: 60px;
+  min-height: 100vh;
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  color: #ffffff;
+  background: linear-gradient(-45deg, #ee7752, #ce3e75, #23a6d5, #23d5ab);
+
+  .footer-link {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    text-decoration: none;
+  }
+
+  p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .beian {
+    display: flex;
+    align-items: center;
+
+    img {
+      float: left;
+      width: 16px;
+      margin-right: 5px;
+    }
+
+    p {
+      float: left;
+      height: 20px;
+      margin: 0 0 0 5px;
+      color: #fff;
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+}
