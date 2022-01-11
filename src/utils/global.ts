@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-
+import useTypewriter from 'react-typewriter-hook';
 export function getTime(value: string) {
   return dayjs(value).format('YYYY-MM-DD HH:mm');
 }
@@ -32,25 +32,12 @@ export const getTimes = () => {
   );
   const time =
     diffYears > 0
-      ? ` 已运行${
-        diffYears
-        } 年 ${
-        diffDays
-        } 天 ${
-        diffHours
-        } 小时 ${
-        diffMinutes
-        } 分钟 ${
-        diffSeconds
-        } 秒`
-      : ` 已运行${
-        diffDays
-        } 天 ${
-        diffHours
-        } 小时 ${
-        diffMinutes
-        } 分钟 ${
-        diffSeconds
-        } 秒`;
+      ? ` 已运行${diffYears} 年 ${diffDays} 天 ${diffHours} 小时 ${diffMinutes} 分钟 ${diffSeconds} 秒`
+      : ` 已运行${diffDays} 天 ${diffHours} 小时 ${diffMinutes} 分钟 ${diffSeconds} 秒`;
   return time;
 };
+
+export function MagicWriter(word: string) {
+  const typing = useTypewriter(word);
+  return typing;
+}
