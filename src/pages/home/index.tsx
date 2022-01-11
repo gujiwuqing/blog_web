@@ -2,6 +2,7 @@ import Layout from '../layout';
 import { useEffect, useState } from 'react';
 import { GetArticlePage } from '@/service';
 import HomeArticle from '@/pages/home/components/home-article';
+import styles from './index.module.less';
 
 export default function IndexPage() {
   const [articleList, setArticleList] = useState<any[]>([]);
@@ -15,7 +16,9 @@ export default function IndexPage() {
   }, []);
   return (
     <Layout>
-      <HomeArticle list={articleList} />
+      <div className={styles.content}>
+        <HomeArticle list={articleList} />
+      </div>
     </Layout>
   );
 }

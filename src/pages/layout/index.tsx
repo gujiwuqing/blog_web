@@ -7,6 +7,7 @@ export default function Layout({ children }: any) {
   const { scrollTop } = document.documentElement;
   useEffect(() => {
     window.onscroll = function () {
+      document.getElementsByClassName('header')[0].className = 'header';
       if (scrollTop > 30) {
         document.getElementsByClassName('header')[0].className = 'fixed-header header';
         // setFlag(true);
