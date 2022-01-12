@@ -22,11 +22,8 @@ const TagList = () => {
   }, [id]);
   console.log(id);
   return (
-    <Layout>
+    <Layout title={<div className="intro">{title}</div>}>
       <Card>
-        <div className={styles['archive-count']} style={{ marginBottom: 10 }}>
-          {title}
-        </div>
         <div className={styles['archive-count']}>共计 {list.length | 0}篇文章</div>
         {list.length > 0 ? (
           <ArticleList data={list} />

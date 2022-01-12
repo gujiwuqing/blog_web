@@ -6,8 +6,7 @@ import SnowBg from '@/components/SnowBg';
 import './index.less';
 
 export default function Layout(props: any) {
-  const { children, title = <div className="intro">剑谱第一页, 心中无女人, 拔剑自然神</div> } =
-    props;
+  const { children, title = <div className="intro">山海亦有归期的博客</div> } = props;
   return (
     <div>
       <SnowBg />

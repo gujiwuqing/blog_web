@@ -18,7 +18,7 @@ const LinkList = () => {
 
   // const style = { background: '#0092ff', padding: '8px 0' };
   return (
-    <Layout>
+    <Layout title={<div className="intro">友情链接</div>}>
       <Card className="link-contaniner">
         <div className="link_title">友链列表</div>
         <Row gutter={[16, 16]}>

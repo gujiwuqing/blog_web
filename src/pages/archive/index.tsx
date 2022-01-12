@@ -20,7 +20,7 @@ const Archive = () => {
     });
   }, []);
   return (
-    <Layout title={<div className="intro">剑谱最终页,无爱即是神</div>}>
+    <Layout title={<div className="intro">归档</div>}>
       <Card className={styles.archive}>
         <div className={styles['archive-count']}>共计 {count} 篇文章</div>
         {Object.keys(articleList).map((key: string) => {

@@ -14,7 +14,7 @@ const TagPage = () => {
     });
   }, []);
   return (
-    <Layout>
+    <Layout title={<div className="intro">分类</div>}>
       <Card>
         {categoryList.map((item) => {
           return (
