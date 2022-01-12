@@ -19,3 +19,7 @@ export function GetLinkList(params: any) {
 export function GetCategoryList() {
   return request.get('/category/list');
 }
+
+export function GetArticleListById(id: string) {
+  return request.get(`/category/${id}`);
+}

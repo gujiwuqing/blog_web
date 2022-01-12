@@ -1,9 +1,9 @@
 import { Menu } from 'antd';
 import {
+  AppstoreOutlined,
+  ContainerOutlined,
   HomeOutlined,
-  InboxOutlined,
   LinkOutlined,
-  TagsOutlined,
   UserOutlined,
 } from '@ant-design/icons';
 import { useState } from 'react';
@@ -23,10 +23,10 @@ const BaseHeader = () => {
       <Menu.Item key="/" icon={<HomeOutlined />}>
         首页
       </Menu.Item>
-      <Menu.Item key="/tag" icon={<TagsOutlined />}>
+      <Menu.Item key="/category" icon={<AppstoreOutlined />}>
         分类
       </Menu.Item>
-      <Menu.Item key="/archive" icon={<InboxOutlined />}>
+      <Menu.Item key="/archive" icon={<ContainerOutlined />}>
         归档
       </Menu.Item>
       <Menu.Item key="/link" icon={<LinkOutlined />}>
