@@ -1,0 +1,24 @@
+.banner {
+  height: 400px;
+  overflow: hidden;
+//   background: url(https://res.cloudinary.com/zhullyb/image/upload/v1/2021/10/25/559a0a5f4a462ce4aad7209ec4a2fe04.jpg)
+//     50% 100% no-repeat;
+  position: relative;
+}
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 32px;
+}
+.intro::after {
+  content: '_';
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

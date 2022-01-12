@@ -28,29 +28,28 @@ export default function ArticleInfo() {
     setInfo({ ...data });
     setMarkdown(data.content);
   };
-  useEffect(() => {
-    document.getElementsByClassName('header')[0].className = 'header bg';
-    document.getElementsByClassName('nav')[0].className = 'article-nav  nav';
-    window.onscroll = function () {
-      const { scrollTop } = document.documentElement;
-      if (scrollTop > 30) {
-        document.getElementsByClassName('header')[0].className = 'fixed-header header';
-        document.getElementsByClassName('nav')[0].className = 'positon-nav nav';
-        // setFlag(true);
-      } else {
-        document.getElementsByClassName('header')[0].className = 'header bg';
-        document.getElementsByClassName('nav')[0].className = 'article-nav  nav';
-        // setFlag(false);
-      }
-    };
-  });
+  // const { scrollTop } = document.documentElement;
+  // useEffect(() => {
+  //   document.getElementsByClassName('nav')[0].className = 'article-nav  nav';
+  //   window.onscroll = function () {
+  //     if (scrollTop > 360) {
+  //       document.getElementsByClassName('nav')[0].className = 'positon-nav nav';
+  //     } else {
+  //       document.getElementsByClassName('nav')[0].className = 'article-nav  nav';
+  //     }
+  //   };
+  // }, [scrollTop]);
   return (
-    <Layout>
-      {/* <div className="article-header" style={{ background: `url(${logoSrc})` }}> */}
-      <div className="article-header bg">
-        <div className="article-header-title">{info.title}</div>
-        <div className="article-header-date">{getTime(info?.createdAt as string)}</div>
-      </div>
+    <Layout
+      title={
+        <>
+          <div className="intro">
+            <div> {info.title}</div>
+            <div style={{ fontSize: 14, textAlign: 'center' }}>{getTime(info?.createdAt)}</div>
+          </div>
+        </>
+      }
+    >
       <div className="article-info">
         <ArtilceMenu content={markdown} />
         <MdEditor

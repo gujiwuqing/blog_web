@@ -7,13 +7,17 @@ import './index.less';
 
 const About = () => {
   return (
-    <Layout>
+    <Layout
+      title={
+        <>
+          <div className="intro">
+            <div>热爱编程，热爱前端</div>
+            <div>身为蝼蚁，当有鸿鹄之志</div>
+          </div>
+        </>
+      }
+    >
       <Card className="about">
-        <div className="flex about-1">
-          {/* <Image src="/img/avatar.png" alt="" className="avatar" /> */}
-          <p className="animate__animated animate__animated">热爱编程，热爱前端</p>
-          <p className="animate__animated animate__backInLeft">身为蝼蚁，当有鸿鹄之志</p>
-        </div>
         <div className="about-2">
           <h2>
             <i className="iconfont icongerenjieshao" />
