@@ -1,7 +1,12 @@
 import dayjs from 'dayjs';
 import useTypewriter from 'react-typewriter-hook';
+
 export function getTime(value: string) {
   return dayjs(value).format('YYYY-MM-DD HH:mm');
+}
+
+export function getDate(value: string) {
+  return dayjs(value).format('YYYY-MM-DD');
 }
 
 export const getTimes = () => {
@@ -41,3 +46,35 @@ export function MagicWriter(word: string) {
   const typing = useTypewriter(word);
   return typing;
 }
+
+export const getTagColor = () => {
+  const colors = [
+    'magenta',
+    'red',
+    'volcano',
+    'orange',
+    'gold',
+    'lime',
+    'green',
+    'cyan',
+    'blue',
+    'geekblue',
+    'purple',
+  ];
+  const num = Math.floor(Math.random() * 10 + 1);
+  return colors[num];
+};
+
+export const getArchiveList = (data: any[]) => {
+  const list = data.map((item) => {
+    return { ...item, year: dayjs(item.createdAt).year() };
+  });
+  return list.reduce((acc, obj) => {
+    const key = obj.year;
+    if (!acc[key]) {
+      acc[key] = [];
+    }
+    acc[key].push(obj);
+    return acc;
+  }, {});
+};

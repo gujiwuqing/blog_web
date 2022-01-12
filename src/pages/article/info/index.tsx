@@ -45,7 +45,9 @@ export default function ArticleInfo() {
         <>
           <div className="intro">
             <div> {info.title}</div>
-            <div style={{ fontSize: 14, textAlign: 'center' }}>{getTime(info?.createdAt)}</div>
+            <div style={{ fontSize: 14, textAlign: 'center' }}>
+              {getTime(info?.createdAt as string)}
+            </div>
           </div>
         </>
       }
@@ -53,7 +55,7 @@ export default function ArticleInfo() {
       <div className="article-info">
         <ArtilceMenu content={markdown} />
         <MdEditor
-          style={{ minHeight: '500px', padding: '0 24px' }}
+          style={{ minHeight: '500px', padding: '0 24px', borderRadius: ' 24px' }}
           modelValue={markdown}
           previewOnly
         />

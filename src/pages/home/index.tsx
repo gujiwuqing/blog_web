@@ -1,8 +1,9 @@
 import Layout from '../layout';
 import { useEffect, useState } from 'react';
 import { GetArticlePage } from '@/service';
-import HomeArticle from '@/pages/home/components/home-article';
-import styles from './index.module.less'
+import HomeArticle from '@/components/home-article';
+import styles from './index.module.less';
+
 export default function IndexPage() {
   const [articleList, setArticleList] = useState<any[]>([]);
   useEffect(() => {

@@ -1,7 +1,8 @@
-import { List, Space } from 'antd';
+import { List, Space, Tag } from 'antd';
 import { LikeOutlined, ReadOutlined, StarOutlined } from '@ant-design/icons';
 import React from 'react';
 import { history } from 'umi';
+import { getTagColor } from '@/utils/global';
 import './index.less';
 
 const IconText = ({ icon, text }: { icon: any; text: string }) => (
@@ -14,9 +15,13 @@ const IconText = ({ icon, text }: { icon: any; text: string }) => (
 interface ArticleItem {
   id: string;
   title: string;
+  cover: string;
   summary: string;
-  loveCount: string;
-  readCount: string;
+  loveCount: number | string;
+  readCount: number | string;
+  isTop: number;
+  tags: any[];
+  categorys: any[];
 }
 
 interface HomeArticleProps {
@@ -36,7 +41,7 @@ const HomeArticle = ({ list }: HomeArticleProps) => {
         pageSize: 6,
       }}
       dataSource={list}
-      renderItem={(item) => (
+      renderItem={(item: ArticleItem) => (
         <List.Item
           className="article-item"
           key={item.id}
@@ -56,7 +61,28 @@ const HomeArticle = ({ list }: HomeArticleProps) => {
             />
           }
         >
-          <List.Item.Meta title={<a>{item.title}</a>} />
+          <List.Item.Meta
+            title={<a>{item.title}</a>}
+            description={
+              <>
+                {item.isTop == 1 && <Tag color="green">置顶</Tag>}
+                {item.tags.map((tag: any) => {
+                  return (
+                    <Tag key={tag.id} color={getTagColor()}>
+                      {tag.name}
+                    </Tag>
+                  );
+                })}
+                {item.categorys.map((category: any) => {
+                  return (
+                    <Tag key={category.id} color={getTagColor()}>
+                      {category.name}
+                    </Tag>
+                  );
+                })}
+              </>
+            }
+          />
           {item.summary}
         </List.Item>
       )}
