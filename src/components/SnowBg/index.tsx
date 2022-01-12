@@ -14,7 +14,7 @@ const SnowBg = () => {
   const config = {
     background: {
       color: {
-        value: '#0d47a1',
+        value: '#1f3144b3',
       },
       position: '50% 50%',
       repeat: 'no-repeat',
@@ -78,7 +78,7 @@ const SnowBg = () => {
         density: {
           enable: true,
         },
-        value: 400,
+        value: 200,
       },
       opacity: {
         random: {
