@@ -13,7 +13,7 @@ const CmsFooter = () => {
     <>
       <div className="footer">
         <p>{date}</p>
-        <p>欢迎来到孤寂无情的博客</p>
+        <p>欢迎来到山海亦有归期的博客</p>
 
         <div className="beian">
           <a

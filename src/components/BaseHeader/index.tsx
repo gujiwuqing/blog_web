@@ -8,11 +8,10 @@ import {
 } from '@ant-design/icons';
 import { useState } from 'react';
 import styles from './index.module.less';
-import { useHistory } from 'umi';
+import { history } from 'umi';
 import './index.less';
 
 const BaseHeader = () => {
-  const history = useHistory();
   const [current, setCurrent] = useState('mail');
   const handleClick = (e: any) => {
     setCurrent(e.key);
@@ -39,7 +38,14 @@ const BaseHeader = () => {
   );
   return (
     <div className="header">
-      <div className={styles['menu-title']}>孤寂无情</div>
+      <div
+        className={styles['menu-title']}
+        onClick={() => {
+          history.push('/');
+        }}
+      >
+        山海亦有归期
+      </div>
       {RenderMenu()}
     </div>
   );
