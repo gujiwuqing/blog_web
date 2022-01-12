@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { message } from 'antd';
+import {message} from 'antd';
 // const baseURL = import.meta.env.PROD ? 'http://81.68.168.90:7001' : 'http://127.0.0.1:7001';
 const baseURL = process.env.NODE_ENV ? 'http://127.0.0.1:7001' : 'http://note.71ting.com:7001';
 
@@ -12,7 +12,7 @@ const request = axios.create({
 request.interceptors.request.use(
   (config: any) => {
     // config?.headers?.authorization = `Bearer ${localStorage.getItem('token')}`;
-    config.headers.authorization = 'Bearer 113121412412';
+    // config.headers.authorization = 'Bearer 113121412412';
     // 在发送请求之前做些什么
     return config;
   },

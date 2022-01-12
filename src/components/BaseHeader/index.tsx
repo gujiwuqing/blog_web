@@ -17,16 +17,16 @@ const BaseHeader = () => {
       <Menu.Item key="/" icon={<HomeOutlined />}>
         首页
       </Menu.Item>
-      <Menu.Item key="tag" icon={<AppstoreOutlined />}>
+      <Menu.Item key="/tag" icon={<AppstoreOutlined />}>
         标签
       </Menu.Item>
-      <Menu.Item key="archive" icon={<AppstoreOutlined />}>
+      <Menu.Item key="/archive" icon={<AppstoreOutlined />}>
         归档
       </Menu.Item>
-      <Menu.Item key="link" icon={<AppstoreOutlined />}>
+      <Menu.Item key="/link" icon={<AppstoreOutlined />}>
         友联
       </Menu.Item>
-      <Menu.Item key="about" icon={<AppstoreOutlined />}>
+      <Menu.Item key="/about" icon={<AppstoreOutlined />}>
         关于我
       </Menu.Item>
     </Menu>
