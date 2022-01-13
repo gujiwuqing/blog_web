@@ -27,7 +27,7 @@ interface ArticleItem {
 interface HomeArticleProps {
   list: ArticleItem[];
 }
-
+const defaultImg='https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png'
 const HomeArticle = ({ list }: HomeArticleProps) => {
   return (
     <List
@@ -53,16 +53,14 @@ const HomeArticle = ({ list }: HomeArticleProps) => {
             <IconText icon={LikeOutlined} text={item.loveCount} key="list-vertical-like-o" />,
             <IconText icon={ReadOutlined} text={item.readCount} key="list-vertical-message" />,
           ]}
-          extra={
-            <img
+          extra={<img
               width={272}
               alt="logo"
-              src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
-            />
-          }
+              src={item.cover || defaultImg}
+            />}
         >
           <List.Item.Meta
-            title={<a>{item.title}</a>}
+            title={item.title}
             description={
               <>
                 {item.isTop == 1 && <Tag color="green">置顶</Tag>}
