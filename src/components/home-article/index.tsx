@@ -2,7 +2,7 @@ import { List, Space, Tag } from 'antd';
 import { LikeOutlined, ReadOutlined, StarOutlined } from '@ant-design/icons';
 import React from 'react';
 import { history } from 'umi';
-import { getTagColor } from '@/utils/global';
+import { getTagColor, getTime } from '@/utils/global';
 import './index.less';
 
 const IconText = ({ icon, text }: { icon: any; text: string }) => (
@@ -27,7 +27,8 @@ interface ArticleItem {
 interface HomeArticleProps {
   list: ArticleItem[];
 }
-const defaultImg='https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png'
+
+const defaultImg = 'https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png';
 const HomeArticle = ({ list }: HomeArticleProps) => {
   return (
     <List
@@ -53,11 +54,7 @@ const HomeArticle = ({ list }: HomeArticleProps) => {
             <IconText icon={LikeOutlined} text={item.loveCount} key="list-vertical-like-o" />,
             <IconText icon={ReadOutlined} text={item.readCount} key="list-vertical-message" />,
           ]}
-          extra={<img
-              width={272}
-              alt="logo"
-              src={item.cover || defaultImg}
-            />}
+          extra={<img width={272} alt="logo" src={item.cover || defaultImg} />}
         >
           <List.Item.Meta
             title={item.title}
@@ -81,7 +78,8 @@ const HomeArticle = ({ list }: HomeArticleProps) => {
               </>
             }
           />
-          {item.summary}
+          <p>{item.summary}</p>
+          <div style={{ color: '#666' }}>{getTime(item.createdAt)}</div>
         </List.Item>
       )}
     />
