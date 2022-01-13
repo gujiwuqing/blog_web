@@ -71,7 +71,7 @@ const Catalog = ({ heads }: { heads: any[] }): ReactElement => {
   useEffect(moveToHead, [heads]);
 
   return (
-    <Anchor affix={false} showInkInFixed={false}>
+    <Anchor affix={false} showInkInFixed>
       <div className="markNav-title">文章目录</div>
       {catalogs.map((item) => (
         <CatalogLink key={`${item.level}-${item.text}`} tocItem={item} />

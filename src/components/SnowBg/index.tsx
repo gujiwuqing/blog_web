@@ -1,20 +1,16 @@
 import Particles from 'react-tsparticles';
 import './index.less';
 
-const SnowBg = () => {
-  const particlesInit = (main) => {
-    console.log(main);
-
+const SnowBg = ({ color }: { color: string }) => {
+  const particlesInit = () => {
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
   };
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
+  const particlesLoaded = () => {};
   const config = {
     background: {
       color: {
-        value: '#1f3144b3',
+        value: color,
       },
       position: '50% 50%',
       repeat: 'no-repeat',

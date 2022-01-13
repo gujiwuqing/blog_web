@@ -6,12 +6,17 @@ import SnowBg from '@/components/SnowBg';
 import './index.less';
 
 export default function Layout(props: any) {
-  const { children, title = <div className="intro">山海亦有归期的博客</div> } = props;
+  const {
+    children,
+    color = '#5ac5fe',
+    title = <div className="intro">山海亦有归期的博客</div>,
+    ImgUrl = 'https://res.cloudinary.com/zhullyb/image/upload/v1/2021/10/25/559a0a5f4a462ce4aad7209ec4a2fe04.jpg',
+  } = props;
   return (
     <div>
-      <SnowBg />
+      <SnowBg color={color} />
       <BaseHeader />
-      <BaseBanner title={title} />
+      <BaseBanner title={title} ImgUrl={ImgUrl} />
       <div className="layout">{children}</div>
       <BaseFooter />
     </div>

@@ -18,7 +18,11 @@ const LinkList = () => {
 
   // const style = { background: '#0092ff', padding: '8px 0' };
   return (
-    <Layout title={<div className="intro">友情链接</div>}>
+    <Layout
+      color="#6f63c1"
+      title={<div className="intro">友情链接</div>}
+      ImgUrl="https://desk-fd.zol-img.com.cn/t_s1920x1080c5/g6/M00/05/00/ChMkKmEwK5eIPiUBABbc2lVNMOoAATU5QBAn1YAFtzy978.jpg"
+    >
       <Card className="link-contaniner">
         <div className="link_title">友链列表</div>
         <Row gutter={[16, 16]}>

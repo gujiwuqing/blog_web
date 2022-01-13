@@ -24,11 +24,13 @@ const CmsFooter = () => {
           >
             <img src={icon} />
             <p>赣公网安备 36010302000230号</p>
-            <span id="busuanzi_container_site_pv">
-              本站总访问量
-              <span id="busuanzi_value_site_pv" />次
-            </span>
           </a>
+        </div>
+        <div>
+          <span id="busuanzi_container_site_pv" style={{ color: '#fff' }}>
+            本站总访问量
+            <span id="busuanzi_value_site_pv" style={{ color: '#fff' }} />次
+          </span>
         </div>
       </div>
     </>

@@ -8,6 +8,7 @@ import './index.less';
 const About = () => {
   return (
     <Layout
+      color="#313941"
       title={
         <>
           <div className="intro">
@@ -15,6 +16,7 @@ const About = () => {
           </div>
         </>
       }
+      ImgUrl="https://desk-fd.zol-img.com.cn/t_s1920x1080c5/g6/M00/05/09/ChMkKmHWjOGIRqAKAECYPsvmE3wAAXVVgG949IAQJhW560.jpg"
     >
       <Card className="about">
         <div className="about-2">

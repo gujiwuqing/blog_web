@@ -20,7 +20,11 @@ const Archive = () => {
     });
   }, []);
   return (
-    <Layout title={<div className="intro">归档</div>}>
+    <Layout
+      color="#c79b6b"
+      title={<div className="intro">归档</div>}
+      ImgUrl="https://desk-fd.zol-img.com.cn/t_s1920x1080c5/g6/M00/0B/06/ChMkKmFuI7yIYoMgAFY3_5PxvGIAAUuPgLMBTsAVjgX890.jpg"
+    >
       <Card className={styles.archive}>
         <div className={styles['archive-count']}>共计 {count} 篇文章</div>
         {Object.keys(articleList).map((key: string) => {

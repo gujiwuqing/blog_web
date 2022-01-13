@@ -11,7 +11,13 @@ const BaseBanner = ({
   title = `山海亦有归期的博客`,
 }: BaseBannerProps) => {
   return (
-    <div className="banner" style={{ background: `url(${ImgUrl}) 50% 100% no-repeat` }}>
+    <div
+      className="banner"
+      style={{
+        background: `url(${ImgUrl})  no-repeat`,
+        width: '100%',
+      }}
+    >
       {title}
     </div>
   );
