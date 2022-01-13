@@ -14,7 +14,9 @@ const BaseBanner = ({
     <div
       className="banner"
       style={{
-        background: `url(${ImgUrl})  no-repeat`,
+        backgroundImage: `url(${ImgUrl})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
         width: '100%',
       }}
     >

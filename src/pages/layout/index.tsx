@@ -8,9 +8,9 @@ import './index.less';
 export default function Layout(props: any) {
   const {
     children,
-    color = '#dad0d6',
+    color = '#837971',
     title = <div className="intro">山海亦有归期的博客</div>,
-    ImgUrl = 'https://res.cloudinary.com/zhullyb/image/upload/v1/2021/10/25/559a0a5f4a462ce4aad7209ec4a2fe04.jpg',
+    ImgUrl = 'http://gujiwuqing-1258770926.cos.ap-shanghai.myqcloud.com/8bb658e4c5aaa124e3f37069c047735c.jpg53873c57-3a01-475c-a0c6-bf5162f7a690',
   } = props;
   return (
     <div>
