@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { GetArticleInfo } from '../../../service';
+import Catalog from '@/components/Catalog';
+import { ArticleItem } from '@/interface/global';
 import Layout from '@/pages/layout';
-import './index.less';
+import { getTime } from '@/utils/global';
+import { Affix } from 'antd';
 import MdEditor from 'md-editor-rt';
 import 'md-editor-rt/lib/style.css';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'umi';
-import ArtilceMenu from './ArticleMenu';
-import { ArticleItem } from '@/interface/global';
-import { getTime } from '@/utils/global';
+import { GetArticleInfo } from '../../../service';
+import './index.less';
 
 export default function ArticleInfo() {
   const [markdown, setMarkdown] = useState('');
+  const [list, setList] = useState<any[]>([]);
   const [info, setInfo] = useState<ArticleItem>({
     id: '',
     title: '',
@@ -28,17 +30,6 @@ export default function ArticleInfo() {
     setInfo({ ...data });
     setMarkdown(data.content);
   };
-  // const { scrollTop } = document.documentElement;
-  // useEffect(() => {
-  //   document.getElementsByClassName('nav')[0].className = 'article-nav  nav';
-  //   window.onscroll = function () {
-  //     if (scrollTop > 360) {
-  //       document.getElementsByClassName('nav')[0].className = 'positon-nav nav';
-  //     } else {
-  //       document.getElementsByClassName('nav')[0].className = 'article-nav  nav';
-  //     }
-  //   };
-  // }, [scrollTop]);
   return (
     <Layout
       title={
@@ -53,13 +44,19 @@ export default function ArticleInfo() {
       }
     >
       <div className="article-info">
-        <ArtilceMenu content={markdown} />
         <MdEditor
           style={{ minHeight: '500px', padding: '0 24px', borderRadius: ' 24px' }}
           modelValue={markdown}
           previewOnly
+          onGetCatalog={(arr) => {
+            setList(arr);
+          }}
         />
-        <div style={{ width: 300 }} />
+        <div className="catalog">
+          <Affix offsetTop={70}>
+            <Catalog heads={list} />
+          </Affix>
+        </div>
       </div>
     </Layout>
   );
