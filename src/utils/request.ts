@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { message } from 'antd';
 // const baseURL = import.meta.env.PROD ? 'http://81.68.168.90:7001' : 'http://127.0.0.1:7001';
-const baseURL = process.env.NODE_ENV ? 'http://127.0.0.1:7001' : 'http://gujiwuqing.com:7001';
+const baseURL = 'http://gujiwuqing.com:7001';
 
 const request = axios.create({
   baseURL,
