@@ -4,6 +4,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  title: '山海亦有归期',
   routes: [
     { path: '/', component: '@/pages/home' },
     { path: '/article/:id', component: '@/pages/article/info' },
