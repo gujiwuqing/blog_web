@@ -11,3 +11,11 @@ export interface ArticleItem {
   tags?: any[];
   categorys?: any[];
 }
+
+export interface CommentItem {
+  id?: string;
+  createdAt?: string;
+  author?: string;
+  email?: string;
+  content?: string;
+}

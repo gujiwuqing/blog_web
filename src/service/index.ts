@@ -23,3 +23,11 @@ export function GetCategoryList() {
 export function GetArticleListById(id: string) {
   return request.get(`/category/${id}`);
 }
+
+export function CreateComment(data: any) {
+  return request.post('/comment', data);
+}
+
+export function GetCommentList() {
+  return request.get('/comment/list');
+}

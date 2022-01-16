@@ -31,6 +31,9 @@ const BaseHeader = () => {
       <Menu.Item key="/link" icon={<LinkOutlined />}>
         友联
       </Menu.Item>
+      <Menu.Item key="/comment" icon={<LinkOutlined />}>
+        留言板
+      </Menu.Item>
       <Menu.Item key="/about" icon={<UserOutlined />}>
         关于我
       </Menu.Item>

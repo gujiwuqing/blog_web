@@ -12,6 +12,7 @@ export default defineConfig({
     { path: '/category', component: '@/pages/category' },
     { path: '/category/:id', component: '@/pages/category/list' },
     { path: '/archive', component: '@/pages/archive' },
+    { path: '/comment', component: '@/pages/comment' },
     { path: '/about', component: '@/pages/about' },
   ],
   fastRefresh: {},
