@@ -34,7 +34,10 @@ const CommentPage = () => {
       <Form.Item
         label="少侠尊称"
         name="author"
-        rules={[{ required: true, message: '请输入少侠的尊称' }]}
+        rules={[
+          { required: true, message: '请输入少侠的尊称' },
+          { min: 3, max: 6, message: '请输入3-6位数的尊称' },
+        ]}
       >
         <Input />
       </Form.Item>
@@ -56,7 +59,7 @@ const CommentPage = () => {
         name="content"
         rules={[{ required: true, message: '请输入少侠想要说的话' }]}
       >
-        <TextArea rows={3} />
+        <TextArea rows={3} maxLength={100} />
       </Form.Item>
       <Form.Item wrapperCol={{ offset: 3, span: 16 }}>
         <Button type="primary" loading={loading} htmlType="submit">

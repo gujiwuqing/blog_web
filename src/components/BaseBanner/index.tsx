@@ -7,7 +7,7 @@ interface BaseBannerProps {
 }
 
 const BaseBanner = ({
-  ImgUrl = 'http://gujiwuqing-1258770926.cos.ap-shanghai.myqcloud.com/8bb658e4c5aaa124e3f37069c047735c.jpg53873c57-3a01-475c-a0c6-bf5162f7a690',
+  ImgUrl = 'http://img.gujiwuqing.top/read.jpg',
   title = `山海亦有归期的博客`,
 }: BaseBannerProps) => {
   return (
