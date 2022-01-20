@@ -7,7 +7,7 @@ interface BaseBannerProps {
 }
 
 const BaseBanner = ({
-  ImgUrl = 'http://img.gujiwuqing.top/read.jpg',
+  ImgUrl = 'https://img.gujiwuqing.top/read.jpg',
   title = `山海亦有归期的博客`,
 }: BaseBannerProps) => {
   return (
