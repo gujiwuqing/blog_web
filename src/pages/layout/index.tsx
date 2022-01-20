@@ -4,6 +4,7 @@ import BaseFooter from '@/components/BaseFooter';
 import BaseBanner from '@/components/BaseBanner';
 import SnowBg from '@/components/SnowBg';
 import './index.less';
+import { BackTop } from 'antd';
 
 export default function Layout(props: any) {
   const {
@@ -19,6 +20,7 @@ export default function Layout(props: any) {
       <BaseBanner title={title} ImgUrl={ImgUrl} />
       <div className="layout">{children}</div>
       <BaseFooter />
+      <BackTop />
     </div>
   );
 }
