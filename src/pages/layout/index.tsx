@@ -10,7 +10,7 @@ export default function Layout(props: any) {
     children,
     color = '#837971',
     title = <div className="intro">山海亦有归期的博客</div>,
-    ImgUrl = 'http://img.gujiwuqing.top/read.jpg',
+    ImgUrl = 'https://img.gujiwuqing.top/read.jpg',
   } = props;
   return (
     <div>
