@@ -20,7 +20,6 @@ const TagList = () => {
       setTitle(name);
     });
   }, [id]);
-  console.log(id);
   return (
     <Layout title={<div className="intro">{title}</div>}>
       <Card>

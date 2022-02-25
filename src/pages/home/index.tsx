@@ -1,24 +1,25 @@
 import Layout from '../layout';
-import { useEffect, useState } from 'react';
 import { GetArticlePage } from '@/service';
 import HomeArticle from '@/components/home-article';
 import styles from './index.module.less';
+import { IGetInitialProps } from 'umi';
 
-export default function IndexPage() {
-  const [articleList, setArticleList] = useState<any[]>([]);
-  useEffect(() => {
-    GetArticlePage({}).then((res) => {
-      const {
-        data: { list },
-      } = res;
-      setArticleList([...list]);
-    });
-  }, []);
+const Home = (props: any) => {
   return (
     <Layout>
       <div className={styles.container}>
-        <HomeArticle list={articleList} />
+        <HomeArticle list={props.list} />
       </div>
     </Layout>
   );
-}
+};
+Home.getInitialProps = (async () => {
+  const {
+    data: { list },
+  } = await GetArticlePage({});
+  return Promise.resolve({
+    list,
+  });
+}) as IGetInitialProps;
+
+export default Home;

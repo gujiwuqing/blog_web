@@ -2,7 +2,7 @@ import { List, Space, Tag } from 'antd';
 import { LikeOutlined, ReadOutlined, StarOutlined } from '@ant-design/icons';
 import React from 'react';
 import { history } from 'umi';
-import { getTagColor, getTime } from '@/utils/global';
+import { getTime } from '@/utils/global';
 import './index.less';
 
 const IconText = ({ icon, text }: { icon: any; text: string }) => (
@@ -15,6 +15,7 @@ const IconText = ({ icon, text }: { icon: any; text: string }) => (
 interface ArticleItem {
   id: string;
   title: string;
+  createdAt: string;
   cover: string;
   summary: string;
   loveCount: number | string;
@@ -62,18 +63,10 @@ const HomeArticle = ({ list }: HomeArticleProps) => {
               <>
                 {item.isTop == 1 && <Tag color="green">置顶</Tag>}
                 {item.tags.map((tag: any) => {
-                  return (
-                    <Tag key={tag.id} color={getTagColor()}>
-                      {tag.name}
-                    </Tag>
-                  );
+                  return <Tag key={tag.id}>{tag.name}</Tag>;
                 })}
                 {item.categorys.map((category: any) => {
-                  return (
-                    <Tag key={category.id} color={getTagColor()}>
-                      {category.name}
-                    </Tag>
-                  );
+                  return <Tag key={category.id}>{category.name}</Tag>;
                 })}
               </>
             }

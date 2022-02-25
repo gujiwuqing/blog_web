@@ -16,5 +16,9 @@ export default defineConfig({
     { path: '/about', component: '@/pages/about' },
   ],
   fastRefresh: {},
-  mfsu: {},
+  ssr: {},
+  exportStatic: {},
+  // styleLoader: {
+  //   esModule: false,
+  // },
 });
