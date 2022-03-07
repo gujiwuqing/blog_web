@@ -37,6 +37,9 @@ const BaseHeader = () => {
       <Menu.Item key="/about" icon={<UserOutlined />}>
         关于我
       </Menu.Item>
+      <Menu.Item key="/components" icon={<AppstoreOutlined/>}>
+        React社区精选组件
+      </Menu.Item>
     </Menu>
   );
   return (

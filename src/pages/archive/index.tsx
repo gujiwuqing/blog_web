@@ -42,7 +42,7 @@ const Archive = () => {
                       }}
                     >
                       <div>{article.title}</div>
-                      <div>{getTime(article.createdAt)}</div>
+                      <div>{getTime(article.createdAt as string)}</div>
                     </div>
                   );
                 })}

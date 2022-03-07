@@ -14,6 +14,7 @@ export default defineConfig({
     { path: '/archive', component: '@/pages/archive' },
     { path: '/comment', component: '@/pages/comment' },
     { path: '/about', component: '@/pages/about' },
+    { path: '/components', component: '@/pages/star-components' },
   ],
   fastRefresh: {},
   ssr: {},
